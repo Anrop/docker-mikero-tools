@@ -1,0 +1,14 @@
+DeFxy Version 1.xx by Mikero
+min dll is 4.29
+fixed bug in nsis installer to prevent potential dos environ path being cleared
+
+1.61
+updated to self installer
+added -P don't pause
+1.60
+created much smaller exe footprint
+1.59
+corrected memleak when error detected (getcwd)
+1.58
+provided proper error output status
+

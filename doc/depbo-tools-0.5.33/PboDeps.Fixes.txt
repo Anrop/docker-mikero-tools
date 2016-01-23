@@ -1,0 +1,11 @@
+Minimum DePbo.dll is 4.55
+1.12
+sent output to folder of pbos rather than parent'
+added -Pause
+added -Unicode
+1.11
+provided standard dependency lists for a2,co, and arrowhead
+
+fixed bug in nsis installer to prevent potential dos environ path being cleared
+1.10
+first release

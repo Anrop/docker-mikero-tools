@@ -1,0 +1,55 @@
+minimum dll is 5.xx
+1.76
+updated api in dll and made this exe compatible
+1.75
++Gname=thing allows geolod property changes (any p3d type)
+
+1.74:
+allowed folder scan for extracting skeletons. non odol, non skeleton, p3ds are ignored
+1.73 dll update
+allowed conversion of type68's
+
+1.72
+convert type to 58's
+added folderscan option so that folders and their children are scanned for p3d's >type58 and converted. all others are ignored
+
+1.71
+made compatible to dll
+1.70
+update to allow type 58 only p3d's to be converted back to type58
+1.69
+fixed bug in nsis installer to prevent potential dos environ path being cleared
+
+fixed a security leak printf(ptr) vs printf("%s",ptr);
+1.68
+made compat to dll
+1.67
+made compat to dll
+changed syntax blurb
+fixed -nn to accept only valid numbers
+removed extractmodelcfg.exe and extract rvmats from tools. dep3d is it's successor
+added free form argument list to accept files, folders or lists
+fixed error in listing named selections
+
+1.66
+displayed hidden option -S list sections (named selections)
+
+1.65
+added icon and filinfo
+addded self installer
+added -P dont pause
+1.64
+added -Backup option
+initially released to Q but i forget the reason
+
+1.63
+fixed -chain option to exit on error
+fixed -chain-tTest option
+
+1.61
+improved -t option a little more to improve error display
+
+enhanced -t option
+
+1.59 
+added chain and test option switches

@@ -1,0 +1,208 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-au">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>well here we are</title>
+</head>
+
+<body>
+
+<p><font face="Arial">DeP3d Version 1.xx by Mikero<br>
+&nbsp;</font></p>
+
+<p><font face="Arial">see readme general and fixes <br>
+&nbsp;</font></p>
+<hr>
+<p><font face="Arial"><br>
+Without options, DeP3d&nbsp; simply inspects <b>any</b> p3d for errors.</font></p>
+
+<p><font face="Arial">With options, you can:</font></p>
+
+<ul>
+  <li><font face="Arial">extract the skeleton or rvmats</font></li>
+  <li><font face="Arial">change the properties of a geolod</font></li>
+  <li><font face="Arial">list NamedSelections</font></li>
+  <li><font face="Arial">degrade a p3d to an earlier type (for bis binarise 
+  compatibility)</font></li>
+</ul>
+<p><font face="Arial">output is generally produced on screen<br>
+<br>
+<br>
+<b>Syntax:<br>
+</b>
+<br>
+DeP3d [-options...]&nbsp;&nbsp; Anyfile[.p3d] <b>or</b> AnyFolder <b>or</b>&nbsp; 
+Any List <b>or</b> &quot;Comma,Separated,list&quot;<br>
+&nbsp;</font></p>
+
+<p><u><font face="Arial">options:</font></u></p>
+
+<p><font face="Arial">none list type of p3d(s) encountered</font></p>
+
+<p><font FACE="Arial" SIZE="2" COLOR="#a31515">-P don't pause</font></p>
+
+<p><font face="Arial" size="2" color="#A31515">-S list all named selections</font></p>
+<p><font FACE="Arial" SIZE="2" COLOR="#a31515">-Es folder | nameof[.p3d] | &lt;file.list&gt; : 
+extract skeleton(s) to &lt;model.cfg&gt;</font></p>
+<p><font SIZE="2" COLOR="#a31515" face="Arial">-Em 
+folder | nameof[.p3d] | &lt;file.list&gt; : extract rvmats to screen</font></p>
+<p><font SIZE="2" COLOR="#a31515" face="Arial">-nn nameof[.p3d] : convert p3d to type nn</font></p>
+<p><font face="Arial" size="2" color="#A31515">&nbsp;&nbsp;&nbsp; nn must be hex 
+or decimal </font></p>
+<p><font face="Arial" size="2" color="#A31515">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+-40 will convert to arma1 p3d</font></p>
+<p><font FACE="Arial" SIZE="2" COLOR="#a31515">-</font><font face="Arial" size="2" color="#A31515">G&nbsp; 
+list geolod properties</font></p>
+<p><font face="Arial" size="2" color="#A31515">+G change geolod properties</font></p>
+<p>&nbsp;</p>
+<hr>
+<p><font face="Arial"><b>Generic Scanning options (all dos tools)</b></font></p>
+<p><font face="Arial">It is useful 
+to quickly scan a folder, series of folders, or a list of p3d's looking for 
+changes to the format.</font></p>
+<p><font face="Arial">one such example is introduction of a physx lod.</font></p>
+<p><font face="Arial">To that end, and in keeping with other pbo tools, dep3d&nbsp; accepts scan 
+syntax on the command line (-options are assumed)</font></p>
+<ul>
+  <li><font face="Arial">dep3d \some\folder\anywhere</font></li>
+</ul>
+<p><font face="Arial">folders are <b>recursively</b> scanned inspecting each p3d it encounters</font></p>
+<ul>
+  <li><font face="Arial">dep3d some.file</font></li>
+</ul>
+<p><font face="Arial">any file that is NOT a .p3d is taken to be a text scan list</font></p>
+<p><font face="Arial">This list file can be a permanently held test suite of 'favorite' p3d's and 
+this list can be 
+generated from something as simple as</font></p>
+<p><font face="Arial">dir/b somefolder &gt;some.lst</font></p>
+<ul>
+  <li><font face="Arial">dep3d &quot;comma,separated,list&quot;</font></li>
+</ul>
+<p><font face="Arial">the net effect of a &quot;comma,separated,list&quot; is the same as 
+specifying a file.list. Quotes are ONLY required when spaces exist in the file 
+names or between commas.</font></p>
+<p><font face="Arial">In both cases (file.list or comma separated), these in 
+turn can be mixtures of specific files, folders and more scan lists.</font></p>
+<hr>
+<p><u><b><font face="Arial" size="4" color="#2F4F4F">Conversions</font></b></u></p>
+<p><font face="Arial" size="5" color="#2F4F4F">
+<span style="background-color: #FF0000">Dep3d is not intended to reverse 
+engineer odol p3d's back to mlods</span></font></p>
+<p><font face="Arial" size="2" color="#2F4F4F">If you are looking for cracking 
+tools, look elsewhere.</font></p>
+<p><b><font face="Arial" size="2" color="#2F4F4F">However</font></b></p>
+<p><font face="Arial" size="2" color="#2F4F4F">&nbsp;DeP3d <b>
+will</b> degrade odol formats to other odol formats</font></p>
+<p><font face="Arial" size="2" color="#2F4F4F">The reasons for doing so is BI's 
+tools such as buldozer, oxygen and visitor are not always up to date with 
+respect to&nbsp; p3d's encountered in various engine patches.</font></p>
+<p><font face="Arial" size="2" color="#2F4F4F">This part of dep3d is intended to 
+downgrade these p3d's into something usable for above tools. Whether they are 
+subsequently usable 'as is' in a derived pbo is not relevant.</font></p>
+<p><font face="Arial" size="2" color="#2F4F4F">Separately, dep3d conversion <b>
+will</b> fully convert OFP formatted p3ds (both odol and mlod)&nbsp; to Arma and 
+vice versa.</font></p>
+<p><font face="Arial" size="2" color="#2F4F4F">The following is a list of 
+version types current as of Arma3 release</font></p>
+<font FACE="Arial" SIZE="2">
+<p>1 MLOD (OFP) (SP3X)</font></p>
+<p>
+<font FACE="Arial" SIZE="2">2 MLOD ARMA (P3DM)</font></p>
+<p><u><b><font face="Arial" size="2">ODOLS</font></b></u></p>
+<p><font FACE="Arial" SIZE="2" COLOR="#2f4f4f">7 </font>
+<font face="Arial" size="2">OFP</font></p>
+<p><font FACE="Arial" SIZE="2">40 ARMA1</p>
+</font>
+<p><font FACE="Arial" SIZE="2" COLOR="#2f4f4f">43 ARMA1</font></p>
+<p><font FACE="Arial" SIZE="2" COLOR="#2f4f4f">47 ARMA2</font></p>
+<p><font FACE="Arial" SIZE="2" COLOR="#2f4f4f">48</font><font FACE="Arial" SIZE="2"> 
+ARMA2</font></p>
+<p><font FACE="Arial" SIZE="2" COLOR="#2f4f4f">49</font><font FACE="Arial" SIZE="2"> 
+ARMA2</font></p>
+<p><font FACE="Arial" SIZE="2" COLOR="#2f4f4f">50</font><font FACE="Arial" SIZE="2"> 
+ARROWHEAD</font></p>
+<p><font face="Arial" size="2" color="#2F4F4F">52 TOH </font></p>
+<p><font face="Arial" size="2" color="#008000">56 ARMA3</font></p>
+<p><font face="Arial" size="2" color="#008000">58 and any more are&nbsp; ARMA3 
+as well</font></p>
+<p>&nbsp;</p>
+<font FACE="Consolas" SIZE="2">
+<p>10043 VBS2 </p>
+</font>
+<p>Following conversions are available:</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="51%" height="260">
+  <tr>
+    <td width="27%" height="19"><font face="Arial"><b>From</b></font></td>
+    <td width="39%" height="19"><font face="Arial"><b>To</b></font></td>
+  </tr>
+  <tr>
+    <td width="27%" height="19"><font face="Arial">ANY</font></td>
+    <td width="39%" height="19"><font face="Arial">OFP MLOD (if text strings 
+    &lt;32)</font></td>
+  </tr>
+  <tr>
+    <td width="27%" height="19"><font face="Arial" size="2">OFP MLOD (type1)</font></td>
+    <td width="39%" height="19"><font face="Arial">ARMA MLOD </font></td>
+  </tr>
+  <tr>
+    <td width="27%" height="19"><font face="Arial">ofp odol</font></td>
+    <td width="39%" height="19"><font face="Arial">any mlod (arma or ofp)</font></td>
+  </tr>
+  <tr>
+    <td width="27%" height="19"><font face="Arial">vbs odol</font></td>
+    <td width="39%" height="19"><font face="Arial">Arma 1</font></td>
+  </tr>
+  <tr>
+    <td width="27%" height="19"><font face="Arial">ARMA MLOD</font></td>
+    <td width="39%" height="19"><font face="Arial">none</font></td>
+  </tr>
+  <tr>
+    <td width="27%" height="20"><font face="Arial">Any Arma1</font></td>
+    <td width="39%" height="20"><font face="Arial">Any Lower Arma1</font></td>
+  </tr>
+  <tr>
+    <td width="27%" height="20"><font face="Arial">Any Arma2</font></td>
+    <td width="39%" height="20"><font face="Arial">Any Lower Arma2</font></td>
+  </tr>
+  <tr>
+    <td width="27%" height="19"><font face="Arial">Arrowhead</font></td>
+    <td width="39%" height="19"><font face="Arial">Any Arma2</font></td>
+  </tr>
+  <tr>
+    <td width="27%" height="19"><font face="Arial">TOH</font></td>
+    <td width="39%" height="19"><font face="Arial">Arrowhead or lower</font></td>
+  </tr>
+  <tr>
+    <td width="27%" height="19"><font face="Arial">ARMa3</font></td>
+    <td width="39%" height="19"><font face="Arial">TOH or lower</font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>GEOLOD PROPERTIES</p>
+<p>&nbsp;</p>
+<p>you can list, change, add or delete geolod properties with the following 
+syntax</p>
+<p>+/-G&nbsp;&nbsp; // list properties</p>
+<p>+/-Gname[=]&nbsp;&nbsp;&nbsp;&nbsp; // delete the property (if it exists)</p>
+<p>+/-Gname=value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // change or add the value</p>
+<p>if the property does not exist, or the value is the same, an information 
+message is displayed on the console, but it is NOT an error</p>
+<p>The  G option must be the last option (in this option argument)</p>
+<p>when used, there&nbsp; must be no space surrounding the = sign</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Arial"><br>
+<br>
+<br>
+&nbsp;</font></p>
+
+</body>
+
+</html>

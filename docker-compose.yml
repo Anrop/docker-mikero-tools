@@ -1,0 +1,6 @@
+test:
+  build: .
+  command: sh makepbo.sh
+  volumes:
+    - .:/tmp/mikero
+  working_dir: /tmp/mikero/test
