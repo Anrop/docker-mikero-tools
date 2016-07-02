@@ -30,7 +30,7 @@ for&nbsp; a mission maker, as an addon maker, to use Makepbo without a plethora
 of options. Makepbo will figure most of it out, dependent on context of the 
 folder and what it contains.</p>
 <p>But, a wealth of -options are available dependent on what you are trying to 
-achieve (compressed files, altered prefix, unincluded files, datestamps, auto 
+achieve (compressed files, altered prefix, un-included files, date-stamps, auto 
 conversion of wav), the list goes on...</p>
 <p><b>ALL </b>pbo types are supported by MakePbo: Ranging from ofp-cwc thru to 
 arma3 / vbs lite with the sole exception of ebo files (genuine vbs2)</p>
@@ -82,15 +82,11 @@ files (currently) mean</p>
   </ul>
 </blockquote>
 <ul>
-  <li>-T binarise and include config.cpp as config.cpp.txt (eg) allow .h (eg) to 
-pass unmolested</li>
+  <li>-T deprecated</li>
+  <li>-M do not binarise mission.sqm</li>
   <li>&nbsp;</li>
   <li>-G Check external references</li>
   <li>-Gs Show rap decoding (debug useful in conjunction with -G)</li>
-  <li>-Gp Check externals but not proxies (ignored, no longer required)</li>
-</ul>
-<p>&nbsp;</p>
-<ul>
   <li>-P dont pause&nbsp; (bad status still reported and up to the controlling 
 program to do something about it)</li>
 </ul>
@@ -130,7 +126,7 @@ conjunction with G/GS)</li>
   <li>-W No DateStamps for files in pbo (helpful when re-generating consistent sha)</li>
 </ul>
 <p><b>LINT ONLY Q option</b></p>
-<p>this option DOES NOT MAKE A PBO. it scans unbinarised wrp and p3d for errors 
+<p>this option DOES NOT MAKE A PBO. it scans un-binarised wrp and p3d for errors 
 (in addition to general rvmat and config checking)</p>
 <p><b>EXTERNAL REFERENCES</b></p>
 <p>-G Check external references when rapifying</p>
@@ -261,12 +257,27 @@ in payload.</p>
 <p>For addons, the results are less spectacular (between 5..10%) because pax's 
 (which form the majority of files in an addon) are generally the largest in size 
 and are (mostly) pre-compressed anyway.</p>
+<p>under no cicumstances will the dll compress init*.sqs or sqf</p>
 <p><b>syntax: </b> </p>
+</font><font FACE="Arial" SIZE="2">
 <p>Default is no compression. (no -z option)</p>
+</font><font FACE="Consolas" SIZE="2"><font FACE="Arial" SIZE="2">
 <p></p>
-<p>MakePbo -Z &quot;Comma,Separated,Ignore,List&quot; [ otheroptions...] folder....</p>
-<p>MakePbo -Z IgnoreList[&lt;.ext&gt;|.lst|.txt] [ otheroptions...] folder....</p>
-<p>&nbsp;</p>
+<p></p>
+</font>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<font FACE="Arial" SIZE="2">
+<p>MakePbo -Z=&quot;Comma,Separated,<b>Ignore</b>,List&quot; [ otheroptions...] folder....</p>
+<p>MakePbo -Z=<b>Ignore</b>List[&lt;.ext&gt;|.lst|.txt] [ otheroptions...] folder....</p>
+</font>
+<p><font FACE="Arial" SIZE="2">Makpbo -Z=default&nbsp;&nbsp;&nbsp; // use the 
+dll's internal context-algorithm</font></p>
 <p>The 1st method uses parameters directly from the command line. This list MUST 
 be enclosed in quotes. (if ,,, or spaced args)</p>
 <p>The 2nd method utilises (an often common) ignore list. The content of which 
@@ -277,7 +288,9 @@ specify a different .extension</p>
 <p>compression will only occur to each 'file' if resulting output is smaller 
 that original.</p>
 <p>YOU MUST SPECIFY A LIST if using the Z option</p>
-<p>If you want DEFAULT files to be compressed use &quot;&quot; or &quot;default&quot;</p>
+<p>If you want DEFAULT files to be compressed use  &quot;default&quot;</p>
+<p>If you want no files to be compressed, don't specify Z !!!</p>
+<p>&nbsp;</p>
 <p>The current dll defaults to ignore are</p>
 <p>*.wav</p>
 <p>*.jpg</p>
@@ -424,15 +437,15 @@ following syntax</p>
 <br>
 Command line options<br>
 <br>
--X none<br>
+-X= none<br>
 <br>
 NOTHING will be excluded<br>
 <br>
--X &quot;comma,separated,list&quot;<br>
+-X=&quot;comma,separated,list&quot;<br>
 When more than one file type is excluded, eg, commas, the list must be specified 
 between quotes. Spacing is permitted.<br>
 <br>
--X An\Exclude\File\Somewhere<br>
+-X= An\Exclude\File\Somewhere<br>
 <br>
 the dll accepts default extensions of .txt or .lst : There is no need to state 
 SomeWhere.LST<br>
@@ -451,9 +464,6 @@ Note that:<br>
 the above syntax only supports the most primitive of wildcard (*.)<br>
 there is no mechanism to exclude path\to\folder or path\to\file<br>
 All folders of a given name will be excluded, All files similarly.<br>
-<br>
-<br>
-<br>
 &nbsp;</p>
 <hr><font FACE="Consolas" SIZE="2">
 <p><b>Versioning using pboname.h/hpp</b></p>
@@ -507,7 +517,7 @@ output pboname on the commandline (not an outputfolder, an outputpbo)</p>
 <p>makepbo.exe MyAddon Some\Folder\SomePbo \\ pboname disabled</p>
 </font>
 <p><br>
-<b><font size="5">Obfuscation. the -&amp; option</font></b></p>
+<b><font size="5">Obfuscation. the -! option</font></b></p>
 
 <p>Obfuscation has been introduced to protect people from thievery with arma3 
 life servers (among others)</p>

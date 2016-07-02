@@ -7,7 +7,6 @@ RUN apt-get clean && apt-get purge
 # Install Mikero Tools to system
 COPY bin/ /usr/local/bin
 COPY lib/ /usr/local/lib
-RUN ln -s /usr/local/lib/libdepbo.so.0.5.33 /usr/local/lib/libdepbo.so.0
 
 # Update libraries
 RUN ldconfig

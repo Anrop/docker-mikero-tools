@@ -3,6 +3,9 @@ Rapify version 1.xx by Mikero.
 minimum version of dll is 5.xx
 
 -------------------------------------------------------
+added fsm to list of lintable only files (ext was the other) check pboPro for others
+1.76
+made compatible to dll 1.56
 
 1.75
 added lintcheck bat packages

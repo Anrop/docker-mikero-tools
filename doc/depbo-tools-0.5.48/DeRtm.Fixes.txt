@@ -2,6 +2,7 @@
 min dll is 5.xx
 -----------------
 fixes
+1.75 improved utf8 encoding
 1.74
 made output file same as input. user responsibility to change it.
 

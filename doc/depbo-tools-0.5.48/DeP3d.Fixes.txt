@@ -1,4 +1,11 @@
 minimum dll is 5.xx
+
+made more legible -G option syntax
+added -F (list files or fix files)
+
+1.78
+improved utf8 support
+now extracts skeletons as ascii/utf8 files rather than unicode
 1.76
 updated api in dll and made this exe compatible
 1.75

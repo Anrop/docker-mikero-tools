@@ -54,9 +54,12 @@ folder | nameof[.p3d] | &lt;file.list&gt; : extract rvmats to screen</font></p>
 or decimal </font></p>
 <p><font face="Arial" size="2" color="#A31515">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 -40 will convert to arma1 p3d</font></p>
+<p>-FL list files</p>
+<p>-FX fix files</p>
 <p><font FACE="Arial" SIZE="2" COLOR="#a31515">-</font><font face="Arial" size="2" color="#A31515">G&nbsp; 
 list geolod properties</font></p>
-<p><font face="Arial" size="2" color="#A31515">+G change geolod properties</font></p>
+<p><font face="Arial" size="2" color="#A31515">-Gname change geolod properties</font></p>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 <hr>
 <p><font face="Arial"><b>Generic Scanning options (all dos tools)</b></font></p>
@@ -180,14 +183,17 @@ as well</font></p>
     <td width="39%" height="19"><font face="Arial">TOH or lower</font></td>
   </tr>
 </table>
+<p>FIX FILES</p>
 <p>&nbsp;</p>
+<p>object builder erroneously places P:\ in some file references. the p:\ is 
+removed if present. No error is returned if the file is 'ok' to begin with</p>
 <p>GEOLOD PROPERTIES</p>
 <p>&nbsp;</p>
 <p>you can list, change, add or delete geolod properties with the following 
 syntax</p>
-<p>+/-G&nbsp;&nbsp; // list properties</p>
-<p>+/-Gname[=]&nbsp;&nbsp;&nbsp;&nbsp; // delete the property (if it exists)</p>
-<p>+/-Gname=value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // change or add the value</p>
+<p>-G&nbsp;&nbsp; // list properties</p>
+<p>-Gname&nbsp;&nbsp;&nbsp;&nbsp; // delete the property (if it exists)</p>
+<p>-Gname=value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // change or add the value</p>
 <p>if the property does not exist, or the value is the same, an information 
 message is displayed on the console, but it is NOT an error</p>
 <p>The  G option must be the last option (in this option argument)</p>

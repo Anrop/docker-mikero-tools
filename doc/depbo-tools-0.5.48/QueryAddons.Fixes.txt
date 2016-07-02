@@ -2,7 +2,8 @@ QueryAddons Version 1.xx by Mikero
 -----------------------
 see readmegeneral.txt
 -----------------------
-min dll level is 4.91
+min dll level is 5.56
+1.66 made compatible to dll
 1.65 made compatible to dll
 1.64 made compatible to dll
 1.63a

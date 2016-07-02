@@ -1,7 +1,9 @@
 DePax Version 1.xx by Mikero
-Min Dll is 4.81
+Min Dll is 5.xx
 
 fixes
+1.68
+	made utf8 compatible
 1.67
 minor unicode str fix
 mad.compat to dll

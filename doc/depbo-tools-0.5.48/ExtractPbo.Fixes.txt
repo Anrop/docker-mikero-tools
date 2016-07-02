@@ -2,6 +2,9 @@ ExtractPbo Version 1.xx by Mikero
 see genreadme.txt
 
 min dll level is 5.01
+2.15
+fixes for vipermaul+
+fixes for gui version registry
 
 2.13
 fixed embarrassing inability to enter gui mode

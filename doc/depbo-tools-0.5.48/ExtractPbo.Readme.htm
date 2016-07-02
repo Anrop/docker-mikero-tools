@@ -93,11 +93,14 @@ general scenario is that the extractor will</p>
 <p>In the specific case of non-ofp pbo's , the prefix is accounted for by 
 writing&nbsp; the file <span style="background-color: #FFFF00">pboPrext.txt
 </span>to the output.</p>
-<p>An erroneous pboPrext.txt file if detected in the pbo itself, is <b>never</b> extracted.</p>
+<ul>
+  <li>An erroneous $pboPrefix$[.txt\ file if detected in the pbo itself, is <b>never</b> extracted.</li>
+  <li>Where a pbo has a config.bin AND a config.cpp, the the last listed is 
+  extracted. </li>
+</ul>
 </font>
 
 <font FACE="Consolas" SIZE="2">
-<p>&nbsp;</p>
 
 <font FACE="Arial">
 <p><b>usage</b></p>

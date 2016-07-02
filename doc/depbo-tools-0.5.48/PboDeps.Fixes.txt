@@ -1,4 +1,5 @@
-Minimum DePbo.dll is 4.55
+Minimum DePbo.dll is 5.xx
+1.13 removed output as unicode option
 1.12
 sent output to folder of pbos rather than parent'
 added -Pause

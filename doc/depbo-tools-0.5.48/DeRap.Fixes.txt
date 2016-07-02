@@ -1,6 +1,7 @@
 DeRap Version 1.xx by Mikero. See ReadMeGeneral and fixes
 
 Minimum DLL is 4.91
+1.76 improved utf8 support
 1.75 made compatible to dll with probable improvement to making folders when necessary
 
 1.74

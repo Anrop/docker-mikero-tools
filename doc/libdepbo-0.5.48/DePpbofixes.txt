@@ -1,3 +1,94 @@
+5.48
+support for typ70 p3d's
+added //type (vbs or arma) to baked in rvmat extraction
+now decodes type69 p3d's
+5.47 linux release
+5.46 interim dos release
+5.45
+rapify:
+unbinarisable sqx is listed as a warning in desc.ext 
+but produces an immediate error for a config.cpp
+
+dewrp: fixed dewrp AGAIN!!!
+
+5.44	interim release
+rapify:
+	corrected _EVAL to accept hard-wired array 'productVersion'
+	corrected #defines to also check that MACRO(var...) expansions also result in same output
+			a beter display of the changed macro
+makepbo:
+	config.bin:	rap_volatile_eval() now detected if 'productVersion' is used and a config.bin is being created for a pbo
+	wrps:	reworded missing land classes to confuse less
+			fixed error with no objects in a wrp
+
+extractpbo: config.cpp takes precedence over config.bin when in same pbo folder
+
+5.43
+dewrp:
+	isolated some mem vars from direct acces to outside world
+	made chernarus+ convertible to standard type24
+rapify:
+	allowed sqx bools to be integers for select [this,that] (sth>99)
+	deprecated the option to keep text (the origianl source b4 rap)
+	now allows mission.sqm's to remain unbinarised (but it will be reduced)
+
+5.42
+
+rapify: file checks no longer performed on fsm files
+wrp:
+	missing land class is now checked only against arma3 type25 (or later) wrps
+	checked roadsize structure is size of that stated in wrp
+	now decodes dayz wrp files
+
+internal:
+	bis/dos registry scans now unicode
+5.41:
+	p3d: extract skeleton. fixed null bug
+	added dll version to prefix.txt output
+	rewrote depew
+5.40
+	crippled amalfi's unpbo for obfuscated mission.pbo's
+
+5.39
+	changed $prefix$.txt to state nameOf.pbo in title
+	modified calls for moveobject
+5.38
+	improved obfuscation to defeat amalfi
+	further cleanups and improvements to utf8 support
+5.37 
+Makepbo compression
+	now ignores init*.sqs/sqf
+5.36
+only released for killswitch to evaluate7
+
+filenames
+	all are converted to utf8 internally. 'asciiz' api calls if used are assumed to be utf8
+		filenames are converted back to unicode 16LE only for windows system calls
+filestringEX:
+	no longer throws an error if filename is empty when formatting folder and file
+filetreeEX:
+	full utf8 support so that cyrillic filenames are interpreted correctly
+pbo's 
+	garanteed removal of pbo ebo xbo or ifa on any attmept to create a pbo before any further processing
+	this to ensure no stale copy of the pbo exists to confuse the user.
+
+:rapify
+no longer checks accuracy of file references in dubbing type pbos where
+a relative file directory is involved
+5.35
+dep3d: account for type70 compressed edges which are now longs, not shorts
+		changed api so that all relevent structures are passed as type70 longs
+		the dll converts back and forth internally as required
+5.34:
+dep3d:
+	fixed erroneous statement string that type70's are type68's
+	this error only introduced at 5.33
+	
+	degrades type 70's to type68
+	
+filedates:
+	checked the filedate is valid
+	added pbo entry name in error messages encountered while derapping
 5.33
 
 p3d:
@@ -70,7 +161,7 @@ fixed minor error in nameOf the file's rap class. all cpp files were marked as '
 makepbo: requiredaddons. fixed a forever loop
 
 file refences with added space inside a quoted field  are now flagged in error
-This comes about because a fopen will ignore the extra stuff and say it exists, when it doesn't
+This comes about because a f open will ignore the extra stuff and say it exists, when it doesn't
 
 5.20
 makepbo:
@@ -736,7 +827,7 @@ Strdup: fixed potential error collision of duping same string (was fixed, then b
 stderr messages now ensure lf endings for dos console and crlf for windows gui outputs
 Rapify:
 changed erroneous 'unicode error' to a warning that the filesize of a text file is not the same as the amount
-of characters in that file. This can occur from badly coded block fwrites to disk by the application that wrote the file. 
+of characters in that file. This can occur from badly coded block f writes to disk by the application that wrote the file. 
 It is an indication of file corruption.
 
 makepbo: 

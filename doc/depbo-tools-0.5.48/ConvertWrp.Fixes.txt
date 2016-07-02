@@ -1,4 +1,6 @@
 min dll is 5.xx
+next
+fixed success msg to account for unicode filename
 
 1.79
 made compatible to dll

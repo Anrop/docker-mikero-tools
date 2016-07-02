@@ -1,6 +1,9 @@
-Minimum DePbo.dll is 5.xx
+Minimum DePbo.dll is 5.41
 
 fixes
+1.79 made compatible to dll
+1.78 faulty release of 1.77
+1.77 improved utf8 support. exported cfg files are now utf8 not unicode
 1.76 made compat to dll.
 1.75 made compat and i'm losing interest in mainting this app
 

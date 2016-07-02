@@ -1,9 +1,13 @@
 /* Fixes.txt */
 mindll 5.xx
-next
+1.92
+added ifa to syntax error display.
+corrected readme as !obfuscate, not &obfuscate
+added -M don't binarise mission.sqm
+1.91
 added documentation for obfuscate and rebuild required addons
-changed Z (compression) to allow only z, or z= z space is no longer supported?
-
+changed Z (compression) to allow only z blah, or z= blah (z space is no longer supported)
+fixed bug in ignore compression list where .txt implied (wasn't found)
 1.90
 added rebuild query addons
 1.89
