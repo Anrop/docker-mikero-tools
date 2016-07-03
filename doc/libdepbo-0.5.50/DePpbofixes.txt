@@ -1,3 +1,14 @@
+5.50
+makepbo
+	fixed stuff up where all pbo's were partially obfuscated.
+
+5.49
+
+makepbo
+	changed xxxx.pbo.pbo message on completion of making one 
+	new level of obfuscation to crash bankrev and stop the thieves
+dep3d
+	savage value checking to ensure binarise built the p3d correctly
 5.48
 support for typ70 p3d's
 added //type (vbs or arma) to baked in rvmat extraction

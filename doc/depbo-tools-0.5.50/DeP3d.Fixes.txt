@@ -1,8 +1,10 @@
 minimum dll is 5.xx
+interna;
+	test fixed when .bin.p3d specfied
 
 made more legible -G option syntax
 added -F (list files or fix files)
-
+corrected -pause if nothing but options specified on cmd line
 1.78
 improved utf8 support
 now extracts skeletons as ascii/utf8 files rather than unicode
